@@ -1,17 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-Vue.use(Vuex)
+// modules
+import flight from '@/store/modules/flight';
 
-export default new Vuex.Store({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+Vue.use(Vuex);
+
+export const store = new Vuex.Store({
   modules: {
+    flight
   }
 })
