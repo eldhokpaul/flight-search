@@ -16,8 +16,18 @@ const routes = [
         path: '/results/:origin/:destination/:departureDate/:returnDate/:classType',
         props: true,
         component: () => import('@/views/flight/FlightSearch'),
+      },
+      {
+        path: "/404",
+        name: "404",
+        component: () => import("@/views/error/Error")
       }]
-  }
+  },
+  {
+    path: "*",
+    redirect: "/404"
+  },
+
 ]
 
 const router = new VueRouter({

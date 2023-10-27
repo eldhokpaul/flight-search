@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar clipped-left clipped-right color="white" light>
+  <v-app-bar app clipped-left clipped-right color="white" light>
     <router-link :to="{ name: 'Search' }">
       <v-toolbar-title class="align-center d-flex">
         <!-- <span class="logo-icon">
