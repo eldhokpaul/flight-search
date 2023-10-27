@@ -7,7 +7,7 @@ const theme = {
     primary: '#891b55',
     info: '#1e88e5',
     success: '#21c1d6',
-    accent: '#f0a7a6',
+    accent: '#d41370',
     default: '#563dea'
 }
 

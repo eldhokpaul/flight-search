@@ -1,24 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// import HomeView from '../views/HomeView.vue'
-
 Vue.use(VueRouter)
-
 const routes = [
   {
     path: '/',
     component: () => import('@/layouts/Layout'),
     children: [
-    {
-      name: 'Search',
-      path: '',
-      component: () => import('@/views/home/HomePage'),
-    },
-    {
-      name: 'Results',
-      path: '/results/:origin/:destination/:departureDate/:returnDate',
-      component: () => import('@/views/home/FlightSearch'),
-    }]
+      {
+        name: 'Search',
+        path: '',
+        component: () => import('@/views/flight/FlightsHome'),
+      },
+      {
+        name: 'Results',
+        path: '/results/:origin/:destination/:departureDate/:returnDate/:classType',
+        props: true,
+        component: () => import('@/views/flight/FlightSearch'),
+      }]
   }
 ]
 

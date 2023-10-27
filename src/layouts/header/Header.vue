@@ -1,16 +1,18 @@
 <template>
-  <v-app-bar flat app clipped-left clipped-right color="white" light>
-    <v-toolbar-title class="align-center d-flex">
-      <!-- <span class="logo-icon">
+  <v-app-bar clipped-left clipped-right color="white" light>
+    <router-link :to="{ name: 'Search' }">
+      <v-toolbar-title class="align-center d-flex">
+        <!-- <span class="logo-icon">
         <img src="@/assets/eurowings_logo.png" />
       </span> -->
-      <span class="logo-text ml-2">
-        <img src="@/assets/eurowings_logo.png" class="mt-2" />
-      </span>
-    </v-toolbar-title>
+        <span class="logo-text ml-2">
+          <img src="@/assets/eurowings_logo.png" class="mt-2" />
+        </span>
+      </v-toolbar-title>
+    </router-link>
     <v-spacer />
     <!---right part -->
-    <!-- <v-menu bottom left transition="scale-transition">
+    <v-menu bottom left transition="scale-transition">
       <template v-slot:activator="{ on }">
         <v-btn large icon v-on="on">
           <v-icon>mdi-account-circle</v-icon>
@@ -22,12 +24,11 @@
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
-    </v-menu> -->
+    </v-menu>
   </v-app-bar>
 </template>
 <script>
 // Utilities
-import { mapState, mapMutations } from "vuex";
 export default {
   name: "PageHeader",
 
@@ -40,26 +41,14 @@ export default {
     },
   },
   data: () => ({
-    userprofile: [
-      { title: "My Profile" },
-      { title: "My Balance" },
-      { title: "Inbox" },
-      { title: "Account Setting" },
-      { title: "Logout" },
-    ],
+    userprofile: [{ title: "Sign Up" }, { title: "Login" }],
     href() {
       return undefined;
     },
   }),
 
-  computed: {
-    ...mapState(["Sidebar_drawer"]),
-  },
+  computed: {},
 
-  methods: {
-    ...mapMutations({
-      setSidebarDrawer: "SET_SIDEBAR_DRAWER",
-    }),
-  },
+  methods: {},
 };
 </script>
