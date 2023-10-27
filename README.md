@@ -24,6 +24,8 @@ yarn test:unit
 ```
 yarn lint
 ```
+### Live demo
+See (https://flight-search-demo.netlify.app/).
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
