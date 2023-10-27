@@ -1,10 +1,11 @@
-const express = require("express");
-const serverless = require("serverless-http");
-
+const express = require('express');
+const serverless = require('serverless-http');
 const app = express();
 const router = express.Router();
 
-router.get("/promotions/priceoffers/ond/:origin/:destination", (req, res) => {
+let records = [];
+
+router.get('/promotions/priceoffers/ond/:origin/:destination', (req, res) => {
   const { origin, destination } = req.params;
 
   // Use the query parameters to generate dynamic responses
@@ -55,7 +56,5 @@ router.get("/promotions/priceoffers/ond/:origin/:destination", (req, res) => {
   }, 1000);
 });
 
-app.use(`/.netlify/functions/api`, router);
-
-module.exports = app;
+app.use('/.netlify/functions/api', router);
 module.exports.handler = serverless(app);
