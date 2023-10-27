@@ -1,10 +1,12 @@
 const express = require('express');
 const serverless = require('serverless-http');
+const cors = require('cors');
 const app = express();
 const router = express.Router();
 
 let records = [];
-
+// Enable CORS
+app.use(cors())
 router.get('/promotions/priceoffers/ond/:origin/:destination', (req, res) => {
   const { origin, destination } = req.params;
 
