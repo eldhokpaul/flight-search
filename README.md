@@ -1,4 +1,4 @@
-# flight-search-eurowings
+# flight-search
 
 ## Project setup
 ```
