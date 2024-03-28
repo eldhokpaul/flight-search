@@ -12,7 +12,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.3",
-    "netlify-cli": "^17.2.0",
+    "netlify-cli": "^17.18.1",
     "netlify-lambda": "^2.0.15",
     "serverless-http": "^2.7.0"
   }
