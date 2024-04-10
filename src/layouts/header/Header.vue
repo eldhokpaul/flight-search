@@ -6,7 +6,7 @@
         <img src="@/assets/eurowings_logo.png" />
       </span> -->
         <span class="logo-text ml-2">
-          <img src="@/assets/eurowings_logo.png" class="mt-2" />
+          <img width="80px" src="@/assets/logo.svg" class="mt-2" />
         </span>
       </v-toolbar-title>
     </router-link>
